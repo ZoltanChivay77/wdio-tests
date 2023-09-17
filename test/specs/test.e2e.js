@@ -2,7 +2,29 @@ import { expect } from '@wdio/globals'
 import { Browser } from 'puppeteer-core';
 import  assert  from "assert/strict"
 
-it("Second TestCase", async()=>  {
+it("Login TestCase", async()=>  {
+    await browser.url('https://dou.ua/')
+    await browser.pause(2000);
+    let logButton = await $("*=Вхід і реєстрація")
+    await logButton.click()
+    await browser.pause(2000);
+    let mailLink = await $('#_loginByMail')
+    await mailLink.click()
+    await browser.pause(2000);
+    let logInput = await $('[name ="username"]')
+    await logInput.addValue("test@gmail.com")
+    await browser.pause(1000);
+    let PassInput = await $('[name ="password"]')
+    await PassInput.addValue("templar")
+    await browser.pause(2000);
+
+
+
+
+
+
+
+xit("Second TestCase", async()=>  {
     await browser.url('https://store.steampowered.com/')
     await browser.pause(2000);
     const loginButton = await $("*=войти")
@@ -20,11 +42,11 @@ it("Second TestCase", async()=>  {
     await browser.pause(2000)
     await browser.switchWindow('https://store.steampowered.com/')
     await browser.pause(2000)
+})
 
-
     
     
-    
+    xit("First TestCase", async()=>  { 
     // await browser.url('https://www.google.com.ua');
     // await browser.pause(2000);
     // let gsearch = await $('.gLFyf')
@@ -42,7 +64,7 @@ it("Second TestCase", async()=>  {
     // let wdsearch = await $('.DocSearch-Input')
     // await wdsearch.addValue("First testcase completed")
     // await browser.pause(2020)
-   
+    })
     // it("should get html for centrain elements", async() =>{
     //     await browser.url('https://webdriver.io');
     
