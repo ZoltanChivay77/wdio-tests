@@ -2,16 +2,28 @@ import { expect } from '@wdio/globals'
 import { Browser } from 'puppeteer-core';
 import  assert  from "assert/strict"
 
-describe("Webdriverio main page", ()=>  {
+it("Webdriverio main page", async()=>  {
+    await browser.url('https://www.google.com.ua');
+    await browser.pause(2000);
+    let gsearch = await $('.gLFyf')
+    // await gsearch.addValue("webdriver io")                                  
+    // await browser.pause(2000)
+    // let gclick = await $('.gNO89b')
+    // await gclick.click()
+    // await browser.pause(2000)
+
+
+
+
+
    
-   
-    it("should get html for centrain elements", async() =>{
-        await browser.url('https://webdriver.io');
+    // it("should get html for centrain elements", async() =>{
+    //     await browser.url('https://webdriver.io');
     
-        assert( 1 === 1, "1 not equal 1")
-        assert( 1 === "hello", "1 not equals hello")
+    //     assert( 1 === 1, "1 not equal 1")
+    //     assert( 1 === "hello", "1 not equals hello")
     
-    });
+    // });
     
         // xit("should show waitUntil command", async() =>{
         //     await browser.url('https://webdriver.io');
