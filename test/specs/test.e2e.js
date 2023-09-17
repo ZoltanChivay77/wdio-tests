@@ -5,7 +5,12 @@ import  assert  from "assert/strict"
 it("Webdriverio main page", async()=>  {
     await browser.url('https://www.google.com.ua');
     await browser.pause(2000);
-
+    let gsearch = await $('.gLFyf')
+    await gsearch.addValue("webdriver io")                                  
+    await browser.pause(2000)
+    // let gclick = await $('.gNO89b')
+    // await gclick.click()
+    // await browser.pause(2000)
 
 
 
