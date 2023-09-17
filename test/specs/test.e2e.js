@@ -14,6 +14,9 @@ it("Webdriverio main page", async()=>  {
     let wdclick = await $('a[href="https://webdriver.io/"]')
     await wdclick.click()
     await browser.pause(2020)
+    let wdbutton = await $('.DocSearch-Button-Placeholder')
+    await wdbutton.click()
+    await browser.pause(2020)
 
 
 
