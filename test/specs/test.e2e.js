@@ -2,7 +2,7 @@ import { expect } from '@wdio/globals'
 import { Browser } from 'puppeteer-core';
 import  assert  from "assert/strict"
 
-it("Webdriverio main page", async()=>  {
+it("First TestCase", async()=>  {
     await browser.url('https://www.google.com.ua');
     await browser.pause(2000);
     let gsearch = await $('.gLFyf')
@@ -11,6 +11,15 @@ it("Webdriverio main page", async()=>  {
     let gclick = await $('.gNO89b')
     await gclick.click()
     await browser.pause(2000)
+    let wdclick = await $('a[href="https://webdriver.io/"]')
+    await wdclick.click()
+    await browser.pause(2020)
+    let wdbutton = await $('.DocSearch-Button-Placeholder')
+    await wdbutton.click()
+    await browser.pause(2020)
+    let wdsearch = await $('.DocSearch-Input')
+    await wdsearch.addValue("First testcase completed")
+    await browser.pause(2020)
 
 
 
