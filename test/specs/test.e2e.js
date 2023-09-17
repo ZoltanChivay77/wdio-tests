@@ -11,6 +11,9 @@ it("Webdriverio main page", async()=>  {
     let gclick = await $('.gNO89b')
     await gclick.click()
     await browser.pause(2000)
+    let wdclick = await $('a[href="https://webdriver.io/"]')
+    await wdclick.click()
+    await browser.pause(2020)
 
 
 
