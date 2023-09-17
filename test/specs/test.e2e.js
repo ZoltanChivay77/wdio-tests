@@ -2,29 +2,46 @@ import { expect } from '@wdio/globals'
 import { Browser } from 'puppeteer-core';
 import  assert  from "assert/strict"
 
-it("First TestCase", async()=>  {
-    await browser.url('https://www.google.com.ua');
+it("Second TestCase", async()=>  {
+    await browser.url('https://store.steampowered.com/')
     await browser.pause(2000);
-    let gsearch = await $('.gLFyf')
-    await gsearch.addValue("webdriver io")                                  
+    const loginButton = await $("*=войти")
+    let displayed = await loginButton.isDisplayed()
+    console.log("Is displayed: " + displayed)
+    let clickable = await loginButton.isClickable()
+    console.log("Is clickable: " + clickable)
+    const endOfPage = await $('.small_footer')
     await browser.pause(2000)
-    let gclick = await $('.gNO89b')
-    await gclick.click()
+    await endOfPage.scrollIntoView()
     await browser.pause(2000)
-    let wdclick = await $('a[href="https://webdriver.io/"]')
-    await wdclick.click()
-    await browser.pause(2020)
-    let wdbutton = await $('.DocSearch-Button-Placeholder')
-    await wdbutton.click()
-    await browser.pause(2020)
-    let wdsearch = await $('.DocSearch-Input')
-    await wdsearch.addValue("First testcase completed")
-    await browser.pause(2020)
+    let isFocused = await endOfPage.isFocused()
+    console.log("Is get started button focused before click: " + isFocused)
+    await browser.newWindow('https://google.com');
+    await browser.pause(2000)
+    await browser.switchWindow('https://store.steampowered.com/')
+    await browser.pause(2000)
 
 
-
-
-
+    
+    
+    
+    // await browser.url('https://www.google.com.ua');
+    // await browser.pause(2000);
+    // let gsearch = await $('.gLFyf')
+    // await gsearch.addValue("webdriver io")                                  
+    // await browser.pause(2000)
+    // let gclick = await $('.gNO89b')
+    // await gclick.click()
+    // await browser.pause(2000)
+    // let wdclick = await $('a[href="https://webdriver.io/"]')
+    // await wdclick.click()
+    // await browser.pause(2020)
+    // let wdbutton = await $('.DocSearch-Button-Placeholder')
+    // await wdbutton.click()
+    // await browser.pause(2020)
+    // let wdsearch = await $('.DocSearch-Input')
+    // await wdsearch.addValue("First testcase completed")
+    // await browser.pause(2020)
    
     // it("should get html for centrain elements", async() =>{
     //     await browser.url('https://webdriver.io');
