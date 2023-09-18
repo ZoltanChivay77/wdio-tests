@@ -2,7 +2,7 @@ import { expect } from '@wdio/globals'
 import { Browser } from 'puppeteer-core';
 import  assert  from "assert/strict"
 
-it("Login TestCase", async()=>  {
+xit("Login TestCase", async()=>  {
     await browser.url('https://dou.ua/')
     await browser.pause(2000);
     let logButton = await $("*=Вхід і реєстрація")
@@ -17,12 +17,6 @@ it("Login TestCase", async()=>  {
     let PassInput = await $('[name ="password"]')
     await PassInput.addValue("templar")
     await browser.pause(2000);
-
-
-
-
-
-
 
 xit("Second TestCase", async()=>  {
     await browser.url('https://store.steampowered.com/')
@@ -43,35 +37,31 @@ xit("Second TestCase", async()=>  {
     await browser.switchWindow('https://store.steampowered.com/')
     await browser.pause(2000)
 })
-
-    
-    
     xit("First TestCase", async()=>  { 
-    // await browser.url('https://www.google.com.ua');
-    // await browser.pause(2000);
-    // let gsearch = await $('.gLFyf')
-    // await gsearch.addValue("webdriver io")                                  
-    // await browser.pause(2000)
-    // let gclick = await $('.gNO89b')
-    // await gclick.click()
-    // await browser.pause(2000)
-    // let wdclick = await $('a[href="https://webdriver.io/"]')
-    // await wdclick.click()
-    // await browser.pause(2020)
-    // let wdbutton = await $('.DocSearch-Button-Placeholder')
-    // await wdbutton.click()
-    // await browser.pause(2020)
-    // let wdsearch = await $('.DocSearch-Input')
-    // await wdsearch.addValue("First testcase completed")
-    // await browser.pause(2020)
+    await browser.url('https://www.google.com.ua');
+    await browser.pause(2000);
+    let gsearch = await $('.gLFyf')
+    await gsearch.addValue("webdriver io")                                  
+    await browser.pause(2000)
+    let gclick = await $('.gNO89b')
+    await gclick.click()
+    await browser.pause(2000)
+    let wdclick = await $('a[href="https://webdriver.io/"]')
+    await wdclick.click()
+    await browser.pause(2020)
+    let wdbutton = await $('.DocSearch-Button-Placeholder')
+    await wdbutton.click()
+    await browser.pause(2020)
+    let wdsearch = await $('.DocSearch-Input')
+    await wdsearch.addValue("First testcase completed")
+    await browser.pause(2020)
     })
     // it("should get html for centrain elements", async() =>{
     //     await browser.url('https://webdriver.io');
     
     //     assert( 1 === 1, "1 not equal 1")
     //     assert( 1 === "hello", "1 not equals hello")
-    
-    // });
+        // });
     
         // xit("should show waitUntil command", async() =>{
         //     await browser.url('https://webdriver.io');
@@ -87,8 +77,7 @@ xit("Second TestCase", async()=>  {
         //     console.log("outerHTML :" + outerHTML)
         //     const innerHTML = await $('.dropdown__menu').getHTML(false)
         //     console.log("innerHTML :" + innerHTML)
-    
-        // })
+            // })
 
 //     it("homework2", async ()=> {
 //             await browser.url('https://webdriver.io');                                  //1
