@@ -1,0 +1,12 @@
+Last Homework
+1. Open github.com
+2. Press Sign up
+3. Wait until input was loaded
+4. Check text "Welcome to GitHub! Let’s begin the adventure"	// .toHaveText method
+5. write email into inputEmail
+6. Click button "Continue"
+7. write password into inputPassword
+8. Click button "Continue"
+9. write username into inputUsername
+10. Click button "Continue"
+11. write y into inputAccept
