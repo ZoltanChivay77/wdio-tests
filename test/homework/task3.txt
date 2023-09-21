@@ -1,0 +1,5 @@
+1. Open git.hub.com
+2. Scroll to button "Subscribe"
+3. check link href="https://resources.github.com/newsletter/" is enabled
+4. click link href="https://resources.github.com/newsletter/" 
+5. check window.location.href

@@ -1,0 +1,6 @@
+1. Open git.hub.com
+2. Scroll to element with class '.color-fg-default mb-3 h3-mktg col-lg-8 mx-md-auto px-3'
+3. Check "href="/organizations/enterprise_plan?ref_cta=Start+a+free+enterprise+trial&ref_loc=Home+campaign+footer&ref_page=%2F"" isDisplayed
+4. Push link href="/organizations/enterprise_plan?ref_cta=Start+a+free+enterprise+trial&ref_loc=Home+campaign+footer&ref_page=%2F"
+5. Check //h1[contains(text(),'Pick your trial plan')] isDisplayed
+6. Push element with "*=https://github.com/account/enterprises/new?ref_cta=Enterprise%2520Cloud&ref_loc=choose_an_enterprise_plan&ref_page=%2Forganizations%2Fenterprise_plan%3Fref_cta%3DStart%2Ba%2Bfree%2Benterprise%2Btrial%26ref_loc%3DHome%2Bcampaign%2Bfooter%26ref_page%3D%252F"
