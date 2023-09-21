@@ -62,6 +62,9 @@ describe(" homework", () => {
         await browser.pause(2000);
         await hwThird.pushFinalButton()
         await browser.pause(2000);
+        let finalTitle = await $('#hero-section-brand-heading')
+        await expect(finalTitle).toHaveTextContaining('Thanks for subscribing!')
+        await browser.pause(2000);
 
 
     });

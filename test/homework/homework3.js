@@ -5,6 +5,7 @@ class hwThird {
     get countrySelect() {return $('#country')}
     get pushInput() {return $('#gated-agree-marketingEmailOptin1')}
     get finalButton() {return $('button[type="submit"]')}
+    
     async scrollToScrollPoint(){
         await this.subscribePoint.scrollIntoView()
     }
@@ -29,5 +30,6 @@ class hwThird {
     async pushFinalButton () {
         await this.finalButton.click()
     }
+    
 }
 export default new hwThird()
