@@ -1,6 +1,7 @@
 import { browser } from '@wdio/globals'
 import gHLoginPage from '../homework/githubLoginPage.js'
 import hwSecond from '../homework/homework2.js'
+import hwThird from '../homework/homework3.js'
 describe(" homework", () => {
     xit(" homework1", async () => {
         await browser.url('https://github.com/')                        
@@ -27,10 +28,10 @@ describe(" homework", () => {
         await browser.pause(2000);
     
     });
-    it(" homework2", async () => {
-        await browser.url('https://github.com/')                        //1
+    xit(" homework2", async () => {
+        await browser.url('https://github.com/')                        
         await browser.pause(2000);
-        await hwSecond.scrollToTheText()                             //2
+        await hwSecond.scrollToTheText()                             
         await browser.pause(3000);
         await hwSecond.checkEnterprise()
         console.log("Is displayed: " + hwSecond.checkEnterprise)
@@ -40,7 +41,28 @@ describe(" homework", () => {
         console.log("Is displayed: " + hwSecond.checkHeader)
         await hwSecond.clickOnCloudButton() 
         await browser.pause(2000);
+    });
+    it("homework3", async () => {
+        await browser.url('https://github.com/')
+        await browser.pause(2000);
+        await hwThird.scrollToScrollPoint() 
+        await hwThird.checkSubscribe()
+        console.log("Is link enabled: " + hwThird.checkSubscribe)
+        await hwThird.clickSubscribe()
+        await browser.pause(2000);
+        let currentUrl = browser.getUrl();
+        console.log(currentUrl);
+        await hwThird.checkSubscribeTitle()
+        await browser.pause(2000);
+        await hwThird.putSubscribeTitle()
+        await browser.pause(2000);
+        await hwThird.selectUkraine()
+        await browser.pause(2000);
+        await hwThird.changeInput()
+        await browser.pause(2000);
+        await hwThird.pushFinalButton()
+        await browser.pause(2000);
 
-           
+
     });
 });
