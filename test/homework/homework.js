@@ -2,6 +2,8 @@ import { browser } from '@wdio/globals'
 import gHLoginPage from '../homework/githubLoginPage.js'
 import hwSecond from '../homework/homework2.js'
 import hwThird from '../homework/homework3.js'
+import hwFour from '../homework/homework4.js'
+import hwFive from '../homework/homework5.js'
 describe(" homework", () => {
     xit(" homework1", async () => {
         await browser.url('https://github.com/')                        
@@ -42,7 +44,7 @@ describe(" homework", () => {
         await hwSecond.clickOnCloudButton() 
         await browser.pause(2000);
     });
-    it("homework3", async () => {
+    xit("homework3", async () => {
         await browser.url('https://github.com/')
         await browser.pause(2000);
         await hwThird.scrollToScrollPoint() 
@@ -53,6 +55,7 @@ describe(" homework", () => {
         let currentUrl = browser.getUrl();
         console.log(currentUrl);
         await hwThird.checkSubscribeTitle()
+        console.log("Is link displayed" + hwThird.checkSubscribeTitle)
         await browser.pause(2000);
         await hwThird.putSubscribeTitle()
         await browser.pause(2000);
@@ -67,5 +70,37 @@ describe(" homework", () => {
         await browser.pause(2000);
 
 
+    });
+    xit("homework4", async () => {
+        await browser.url('https://github.com/')
+        await browser.maximizeWindow()
+        await browser.pause(2000);
+        hwFour.pushSearchButt()
+        await browser.pause(2000);
+        hwFour.writeAct()
+        await browser.pause(2000);
+        await browser.keys('Enter')
+        await browser.pause(10000);
+        await hwFour.checkingResult()
+        await browser.pause(2000);
+
+
+    });
+    it("homework5", async () => {
+        await browser.url('https://github.com/')
+        await browser.maximizeWindow()
+        await browser.pause(2000);
+        await hwFive.pushPricingButt()
+        await browser.pause(5000);
+        hwFive.checkPricingTitle()
+        await browser.pause(2000);
+        hwFive.scrollToCompareFeatures()
+        await browser.pause(2000);
+        hwFive.pushCompareFeatures()
+        await browser.pause(2000);
+        hwFive.checkCompareFeaturesTitle()
+        await browser.pause(2000);
+
+        
     });
 });

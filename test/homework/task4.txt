@@ -1,0 +1,5 @@
+1. Open git.hub.com in full window
+2. click on "Search or jump to..."
+3. write "act" in search line
+4. Press "Enter"
+5. Check "act" in results
