@@ -5,7 +5,7 @@ import hwThird from '../homework/homework3.js'
 import hwFour from '../homework/homework4.js'
 import hwFive from '../homework/homework5.js'
 describe(" homework", () => {
-    xit(" homework1", async () => {
+    it(" homework1", async () => {
         await browser.url('https://github.com/')                        
         let welcomeText = await $('span[data-target="typing-effect.content"]')
         await browser.pause(2000);
@@ -30,7 +30,7 @@ describe(" homework", () => {
         await browser.pause(2000);
     
     });
-    xit(" homework2", async () => {
+    it(" homework2", async () => {
         await browser.url('https://github.com/')                        
         await browser.pause(2000);
         await hwSecond.scrollToTheText()                             
@@ -44,7 +44,7 @@ describe(" homework", () => {
         await hwSecond.clickOnCloudButton() 
         await browser.pause(2000);
     });
-    xit("homework3", async () => {
+    it("homework3", async () => {
         await browser.url('https://github.com/')
         await browser.pause(2000);
         await hwThird.scrollToScrollPoint() 
@@ -71,7 +71,7 @@ describe(" homework", () => {
 
 
     });
-    xit("homework4", async () => {
+    it("homework4", async () => {
         await browser.url('https://github.com/')
         await browser.maximizeWindow()
         await browser.pause(2000);
