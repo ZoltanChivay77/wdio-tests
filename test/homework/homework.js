@@ -1,5 +1,5 @@
 import { browser } from '@wdio/globals'
-import gHLoginPage from '../homework/githubLoginPage.js'
+import gHLoginPage from './homework1.js'
 import hwSecond from '../homework/homework2.js'
 import hwThird from '../homework/homework3.js'
 import hwFour from '../homework/homework4.js'
